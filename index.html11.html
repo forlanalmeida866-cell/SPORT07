@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Notícias em Vídeo - MeuSiteFutebol</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background: #111;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .video-background video {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    header nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .news-section {
+      padding: 120px 20px 60px;
+      background: rgba(0,0,0,0.5);
+      min-height: 100vh;
+    }
+
+    .news-section h2 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .news-list {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .news-item {
+      display: flex;
+      background: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      flex-direction: row;
+    }
+
+    .news-item:hover {
+      transform: scale(1.02);
+    }
+
+    .news-item .media {
+      width: 40%;
+      height: 100%;
+    }
+
+    .news-item img,
+    .news-item iframe,
+    .news-item video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .news-content {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .news-content h3 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .news-content p {
+      font-size: 1em;
+      color: #ccc;
+      line-height: 1.5em;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: #000;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      .news-item {
+        flex-direction: column;
+      }
+
+      .news-item .media {
+        width: 100%;
+        height: 200px;
+      }
+
+      .news-content h3 {
+        font-size: 1.4em;
+      }
+
+      .news-item iframe,
+      .news-item video {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="seu_video_de_fundo.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <header>
+    <div class="logo"><h2>SPORT07</h2></div>
+    <nav>
+      <a href="index1.html">Início</a>
+      <a href="">Notícias</a>
+      <a href="index-111.html">Jogos</a>
+      <a href="index.html1.html">artilheiros do mês</a>
+    </nav>
+  </header>
+
+  <section class="news-section">
+    <h2>Notícias em Destaque</h2>
+    <div class="news-list">
+
+      <!-- Notícia 1 - Com Imagem -->
+      <div class="news-item">
+        <div class="media">
+          <img src="placar.jpg" alt="Flamengo vence clássico">
+        </div>
+        <div class="news-content">
+          <h3>Jogo muito pegado</h3>
+          <p>um jogo muito pegado contra a congregação do camama,com placar de 3-5, disputa fisica, jogo mais dificil que já tivemos, com está derrota não estamos abalados pelo contrario é uma motivação para ganhar os proximos Jogos</p>
+        </div>
+      </div>
+
+      <!-- Notícia 2 - Com Vídeo do YouTube -->
+      <div class="news-item">
+        <div class="media">
+        <img src="camisas.jpg" alt="Flamengo vence clássico">
+        </div>
+        <div class="news-content">
+          <h3>Os equipamentos já chegram</h3>
+          <p>Esses é equipamento que usaremos durante todos os jogos que teremos na congregação</p>
+        </div>
+      </div>
+
+      <!-- Notícia 3 - Com Vídeo MP4 -->
+      <div class="news-item">
+        <div class="media">
+          <video controls>
+            <source src="" type="video/mp4">
+            Seu navegador não suporta vídeo.
+          </video>
+        </div>
+        <div class="news-content">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Notícia 4 - Com Imagem -->
+      <div class="news-item">
+        <div class="media">
+          <img src="noticia2.jpg" alt="CBF divulga calendário">
+        </div>
+        <div class="news-content">
+          <h3>CBF divulga calendário para 2026</h3>
+          <p>A CBF publicou oficialmente o calendário do futebol brasileiro para o ano de Copa do Mundo. Veja as datas e mudanças nos campeonatos.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 SPORT07. Todos os direitos reservados.
+  </footer>
+</body>
+</html>

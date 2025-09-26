@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Artilheiros do Mês - MeuSiteFutebol</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background: #111;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .video-background video {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    header nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .table-section {
+      padding: 120px 20px 60px;
+      background: rgba(0,0,0,0.5);
+      min-height: 100vh;
+    }
+
+    .table-section h2 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    table {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background: rgba(0,0,0,0.6);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #444;
+    }
+
+    th {
+      background: #222;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: 20px;
+        border-bottom: 2px solid #444;
+        padding: 10px;
+      }
+
+      td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+        color: #ccc;
+      }
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: #000;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="seu_video_de_fundo.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <header>
+    <div class="logo"><h2>MeuSiteFutebol</h2></div>
+    <nav>
+      <a href="index1.html">Início</a>
+      <a href="index-111.html">Jogos</a>
+      <a href="index.html11.html">noticias</a>
+      <a href="#"></a>
+    </nav>
+  </header>
+
+  <section class="table-section">
+    <h2>Artilheiros do Mês</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Jogador</th>
+          <th>Time</th>
+          <th>Gols</th>
+          <th>Partidas</th>
+          <th>Média</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="#">1</td>
+          <td data-label="Jogador">----</td>
+          <td data-label="Time">----</td>
+          <td data-label="Gols">----</td>
+          <td data-label="Partidas">--</td>
+          <td data-label="Média">----</td>
+        </tr>
+        <tr>
+          <td data-label="#">2</td>
+          <td data-label="Jogador">----</td>
+          <td data-label="Time">----</td>
+          <td data-label="Gols">----</td>
+          <td data-label="Partidas">----</td>
+          <td data-label="Média">----</td>
+        </tr>
+        <tr>
+          <td data-label="#">3</td>
+          <td data-label="Jogador">----</td>
+          <td data-label="Time">----</td>
+          <td data-label="Gols">----</td>
+          <td data-label="Partidas">----</td>
+          <td data-label="Média">----</td>
+        </tr>
+        <tr>
+          <td data-label="#">4</td>
+          <td data-label="Jogador">----</td>
+          <td data-label="Time">----</td>
+          <td data-label="Gols">----</td>
+          <td data-label="Partidas">----</td>
+          <td data-label="Média">---</td>
+        </tr>
+        <!-- Adicione mais artilheiros conforme necessário -->
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    &copy; 2025 MeuSiteFutebol. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
+
+

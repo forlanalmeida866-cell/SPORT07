@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Site Futebol</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+    .video-background {
+      position: fixed;
+      top:0; left:0;
+      width: 100%;
+      height:100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    .video-background video {
+      min-width:100%;
+      min-height:100%;
+      object-fit: cover;
+    }
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+    header nav a {
+      color:#fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero-content {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+      background: rgba(0,0,0,0.4); /* sobreposição */
+    }
+    .hero-content h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    .hero-content p {
+      font-size: 1.5em;
+    }
+    .news-section {
+      padding: 50px 20px;
+      background: #111;
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      gap: 20px;
+    }
+    .news-card {
+      background: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .news-card:hover {
+      transform: scale(1.02);
+    }
+    .news-card img {
+      width:100%;
+      height:200px;
+      object-fit: cover;
+    }
+    .news-card .card-content {
+      padding: 15px;
+    }
+    .news-card .card-content h2 {
+      font-size:1.2em;
+      margin-bottom: 10px;
+    }
+    .news-card .card-content p {
+      font-size: 1em;
+      color: #ccc;
+    }
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: #000;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="" type="video/mp4">
+      <!-- Adicionar formatos fallback se necessário -->
+    </video>
+  </div>
+  
+  <header>
+    <div class="logo"><h2>SPORT07</h2></div>
+    <nav>
+      <a href="index-111.html">Jogos</a>
+      <a href="index.html11.html">Notícias</a>
+      <a href="index.html1.html">artilheiro do mês</a>
+      <a href="#"></a>
+      <a href="#"></a>
+    </nav>
+  </header>
+  
+  <section class="hero-content">
+    <div>
+      <h1>Bem-vindo ao Mundo do Futebol</h1>
+      <p>As últimas notícias, jogos , estatísticas e muito mais.</p>
+    </div>
+  </section>
+  
+  <section class="news-section">
+    <h2 style="color:#fff; text-align:center; margin-bottom:40px;">Últimas Notícias</h2>
+    <div class="news-grid">
+      <div class="news-card">
+        <img src="noticia1.jpg" alt="Notícia 1">
+        <div class="card-content">
+          <h2>Manchete da Notícia 1</h2>
+          <p>Resumo breve da notícia para chamar atenção do leitor...</p>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="" alt="Notícia 2">
+        <div class="card-content">
+          <h2>Manchete da Notícia 2</h2>
+          <p>Um jogo bem louco e bem disputado placar final de 3-5 com a vitoria da congregação do camama</p>
+        </div>
+      </div>
+      <!-- mais cards -->
+    </div>
+  </section>
+  
+  <footer>
+    &copy; 2025 SPORT07. Todos os direitos reservados.
+  </footer>
+  
+  <script>
+    // Se quiser, pode adicionar JS para carregar notícias dinamicamente, efeitos etc.
+  </script>
+</body>
+</html>
